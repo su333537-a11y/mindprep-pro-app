@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "M PLUS Rounded 1c", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #5ca4ff;
+  --color-primary-dark: #3282f6;
+  --color-secondary: #f0f7ff;
+  --color-accent: #ffd166;
+  --color-success: #06d6a0;
+  --color-danger: #ef476f;
+  --color-background: #f8fbff;
+  --color-card: #ffffff;
+  --color-text-main: #4a4a4a;
+  --color-text-muted: #9ca3af;
+  --color-border: #e6f0ff;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  line-height: 1.6;
+}

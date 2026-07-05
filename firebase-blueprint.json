@@ -1,0 +1,26 @@
+{
+  "collections": [
+    {
+      "name": "users",
+      "description": "Stores user-specific app data, including certifications, study progress (bankData), and UI preferences.",
+      "securityRules": {
+        "read": "request.auth != null && request.auth.uid == resource.id",
+        "write": "request.auth != null && request.auth.uid == resource.id"
+      },
+      "documentSchema": {
+        "certs": {
+          "type": "array",
+          "description": "Array of certification objects (id, name, catId, status, examDate, etc.)"
+        },
+        "bankData": {
+          "type": "map",
+          "description": "Key-value mapping of bank IDs to progress data."
+        },
+        "ui": {
+          "type": "map",
+          "description": "UI preferences such as theme, open categories, etc."
+        }
+      }
+    }
+  ]
+}
