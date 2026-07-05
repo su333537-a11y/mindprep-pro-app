@@ -75,6 +75,8 @@ export const BANKS: Record<string, BankMeta> = {
 const EXAM_OR = "https://www.exam.or.jp/";
 const SHOUBO = "https://www.shoubo-shiken.or.jp/";
 const SHIKEN = "https://www.shiken.or.jp/";
+const EIKEN_URL = "https://www.eiken.or.jp/";
+const KANKEN_URL = "https://www.kanken.or.jp/";
 
 export function qcert(id: string, bank: string, name: string, icon: string, note: string, res?: any): Cert { 
   return {id,kind:"quiz",bank,name,icon,status:"target",note,notices:[],resources:res?[res]:[]}; 

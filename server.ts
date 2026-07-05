@@ -4,8 +4,9 @@ import { createServer as createViteServer } from "vite";
 
 async function startServer() {
   const app = express();
-  // Cloud Run defaults to 8080, AI Studio requires 3000
-  const PORT = process.env.K_SERVICE ? 8080 : 3000;
+  // Cloud Run provides the PORT environment variable (defaults to 8080)
+  // AI Studio requires 3000
+  const PORT = process.env.PORT || 3000;
 
   console.log("Starting server. NODE_ENV is:", process.env.NODE_ENV);
   console.log("K_SERVICE is:", process.env.K_SERVICE);

@@ -76,6 +76,16 @@ export interface BankData {
   history: HistoryRecord[];
 }
 
+export interface QuizSession {
+  queue: (string | number)[];
+  idx: number;
+  answers: { id: string | number; sel: number; ok: boolean }[];
+  mode: string;
+  answered: boolean;
+  bank: string;
+  lastWrong?: (string | number)[];
+}
+
 export interface UserData {
   certs: Cert[];
   bankData: Record<string, BankData>;

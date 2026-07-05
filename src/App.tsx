@@ -6,18 +6,9 @@ import { CertView } from './components/CertView';
 import { QuizView } from './components/QuizView';
 import { ResultView } from './components/ResultView';
 import { StatsView } from './components/StatsView';
+import { QuizSession } from './types';
 
 export type ViewType = 'library' | 'cert' | 'quiz' | 'result' | 'stats';
-
-export interface QuizSession {
-  queue: (string | number)[];
-  idx: number;
-  answers: { id: string | number; sel: number; ok: boolean }[];
-  mode: string;
-  answered: boolean;
-  bank: string;
-  lastWrong?: (string | number)[];
-}
 
 export default function App() {
   const { data } = useStore();
